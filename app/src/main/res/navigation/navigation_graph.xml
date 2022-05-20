@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/schoolFragment">
+
+    <fragment
+        android:id="@+id/schoolFragment"
+        android:name="com.example.a20220520_andresgarcia_nycsschools.view.SchoolFragment"
+        android:label="fragment_school"
+        tools:layout="@layout/fragment_school" >
+        <action
+            android:id="@+id/action_schoolFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.a20220520_andresgarcia_nycsschools.view.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="dbn"
+            app:argType="string" />
+    </fragment>
+</navigation>
